@@ -1,0 +1,13 @@
+{
+  "name": "cbse-result-portals-monitor",
+  "version": "1.0.0",
+  "description": "Independent student utility: measures availability and response time of CBSE result portals and links to step-by-step guides.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/monitor.test.js test/server.test.js"
+  },
+  "engines": { "node": ">=18" },
+  "keywords": ["cbse", "results", "uptime", "monitor", "students"],
+  "private": true
+}

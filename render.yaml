@@ -1,0 +1,15 @@
+# Render Blueprint — "New > Blueprint" on render.com reads this file.
+services:
+  - type: web
+    name: cbse-result-portals-monitor
+    runtime: node
+    plan: free
+    region: singapore            # closest Render region to India (also: frankfurt, oregon, ohio, virginia)
+    buildCommand: npm install    # no dependencies; this just prepares the app
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: MONITOR_MODE        # server = this server checks portals | browser = visitors' browsers check
+        value: server
